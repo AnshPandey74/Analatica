@@ -15,12 +15,6 @@ This project is built as a **demo analytics system**, perfect for learning how t
 
 ## 🖼 Screenshots
 
-_Add your screenshots in a folder named `/screenshots` and reference them like this:_
-
-
-
-### **Launch Page**
-![Clicks](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/Click.png)
 
 ### **Homepage Overview**
 ![Homepage](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/Home.png)
