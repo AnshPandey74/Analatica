@@ -19,8 +19,8 @@ _Add your screenshots in a folder named `/screenshots` and reference them like t
 
 
 
-### **Demo Page**
-![Demo Page](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/Clicks.png)
+### **Launch Page**
+![Clicks](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/Click.png)
 
 ### **Homepage Overview**
 ![Homepage](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/Home.png)
