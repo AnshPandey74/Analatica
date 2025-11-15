@@ -26,7 +26,7 @@ _Add your screenshots in a folder named `/screenshots` and reference them like t
 ![Homepage](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/Home.png)
 
 ### **Insight**
-![Insight](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/Insight.png)
+![Insight](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/Insights.png)
 
 ### **Stats**
 ![Stats](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/stats2.png)
