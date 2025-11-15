@@ -7,7 +7,9 @@
 
   function getDevice() {
     return {
-      device_type: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop"
+      device_type: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
+      browser: navigator.userAgent || null,
+      platform: navigator.platform || null
     };
   }
 
@@ -15,15 +17,23 @@
     const payload = {
       event_name: eventName,
       user_id: localStorage.getItem("uid"),
+      url: location.href,
+      referrer: document.referrer || null,
       device: getDevice(),
       metadata: metadata || {}
     };
 
-    fetch(API, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
+    // fire-and-forget
+    if (navigator.sendBeacon) {
+      const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
+      navigator.sendBeacon(API, blob);
+    } else {
+      fetch(API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      }).catch(() => {});
+    }
   }
 
   window.igot = { track: send };
