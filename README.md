@@ -4,13 +4,8 @@ This project demonstrates how user actions can be collected, stored, and visuali
 
 ---
 
-## 📸 Screenshots  
-Create a folder in your repo:  
-
-Upload your PNG/JPG images there and replace the links below.
-
 ### **Demo Page**
-![Demo Page](https://raw.githubusercontent.com/YOUR-USERNAME/analatica/main/screenshots/demo_page.png)
+![Demo Page](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/stats.png)
 
 ### **Dashboard Overview**
 ![Dashboard](https://raw.githubusercontent.com/YOUR-USERNAME/analatica/main/screenshots/dashboard.png)
