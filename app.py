@@ -38,7 +38,7 @@ def ingest_event():
     url = data.get('url')
     referrer = data.get('referrer')
     device = data.get('device') or {}
-    device_os = device.get('os')
+    device_os = device.get('os') or device.get('platform')
     device_browser = device.get('browser')
     device_type = device.get('device_type')
     metadata = data.get('metadata')
@@ -50,9 +50,11 @@ def ingest_event():
                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''',
                 (event_name, timestamp, user_id, session_id, url, referrer, device_os, device_browser, device_type, metadata_json))
     conn.commit()
+    lastid = cur.lastrowid
     conn.close()
 
-    return jsonify({'status': 'ok'})
+    return jsonify({'status': 'ok', 'event_id': lastid}), 201
+
 
 @app.route('/api/analytics/event_counts', methods=['GET'])
 def event_counts():
