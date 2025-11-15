@@ -1,8 +1,23 @@
-# 🧠 Analatica – Event Tracking & Analytics Dashboard  
-A lightweight end-to-end **event analytics engine** built using **Flask**, **SQLite**, **Chart.js**, and a custom **JavaScript tracker**.  
-This project demonstrates how user actions can be collected, stored, and visualized in a clean dashboard — similar to how Mixpanel, Amplitude, and other analytics tools work internally.
+# 🌐 Analatica – Real-Time Event Tracking & Analytics Demo
+
+Analatica is a lightweight, real-time event tracking platform that captures user interactions such as clicks, page views, and device information — and visualizes them in a beautiful dashboard.
+
+This project is built as a **demo analytics system**, perfect for learning how tracking, logging, and visual dashboards work under the hood.
 
 ---
+
+## 🚀 Live Demo
+
+🔗 **Website:** https://analatica.onrender.com  
+🔗 **Dashboard:** https://analatica.onrender.com/dashboard
+
+---
+
+## 🖼 Screenshots
+
+_Add your screenshots in a folder named `/screenshots` and reference them like this:_
+
+
 
 ### **Demo Page**
 ![Demo Page](https://raw.githubusercontent.com/AnshPandey74/analatica/main/ss2/signUp.png)
@@ -15,36 +30,79 @@ This project demonstrates how user actions can be collected, stored, and visuali
 
 ---
 
-## 🚀 Features  
-- 📩 Tracks user actions (page views, signup clicks, custom events)  
-- 📱 Detects device type (mobile/desktop)  
-- 🗃 Stores all events in SQLite  
-- 📊 Dashboard includes:
-  - Event count chart  
-  - Device breakdown (pie)  
-  - Hourly activity chart  
-- 🌙 Light Mode & Dark Mode toggle  
-- 🔌 Clean ingestion API  
-- 🧩 Frontend tracking script (`tracker.js`)  
-- 💡 Fully customizable and beginner-friendly  
 
 ---
 
-## 📁 Project Structure
-analatica/
-│
-├── app.py # Flask backend API + routes
-├── init_db.py # Create SQLite event table
-├── requirements.txt # Python dependencies
-│
-├── static/
-│ └── tracker.js # Frontend event tracking script
-│
-└── templates/
-├── index.html # Demo page (with event triggers + dark mode)
-└── dashboard.html # Analytics dashboard with charts
+## ✨ Features
+
+### **🎯 Real-Time Event Tracking**
+- Tracks page views
+- Tracks custom events (like button clicks)
+- Captures metadata such as:
+  - URL
+  - Referrer
+  - Device Type
+  - Browser
+  - Timestamp
 
 ---
+
+### **📊 Live Analytics Dashboard**
+Built using Chart.js, showing:
+- Event Count Overview
+- Device Type Breakdown
+- Hourly Activity Chart
+
+---
+
+### **💻 Beautiful Modern UI (with Dark Mode)**
+- Clean landing page  
+- Three-section design  
+- Light/Dark theme toggle  
+- Mobile responsive  
+
+---
+
+### **📝 Tech Stack**
+| Layer       | Technology |
+|------------|------------|
+| Backend API | Flask |
+| Frontend UI | HTML, Bootstrap 5, CSS |
+| Charts | Chart.js |
+| Tracking Script | Custom JS (`tracker.js`) |
+| Database | SQLite |
+| Hosting | Render |
+
+---
+
+## 📌 API Endpoints
+
+### **1️⃣ POST /api/events**
+Send a new event to the backend.
+
+**Example Payload**
+```json
+{
+  "event_name": "signup_click",
+  "user_id": "u_f91k73d",
+  "device": { "device_type": "desktop" },
+  "metadata": { "page": "demo" }
+}
+
+
+Analatica/
+│── app.py                # Flask backend
+│── init_db.py            # Database setup
+│── migrate_db.py         # Optional DB migration
+│── requirements.txt      # Dependencies
+│── render.yaml           # Render deployment config
+│── static/
+│     └── tracker.js      # Event tracking script
+│── templates/
+│     ├── index.html      # Landing page
+│     └── dashboard.html  # Analytics dashboard
+└── screenshots/          # Add screenshots for README
+
 
 ## 🛠️ Getting Started
 
